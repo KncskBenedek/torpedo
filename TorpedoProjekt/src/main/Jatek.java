@@ -50,7 +50,9 @@ public class Jatek {
        while (i < holVan.length && !(holVan[i] == tipp)) {
            i++;
        }
-       
+       if (i < holVan.length) {
+           holTalalt[i] = true;
+       }
        return i < holVan.length;
    }
    
