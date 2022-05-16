@@ -26,8 +26,8 @@ public class Jatek {
        this.hajoHossz = hajoHossz;
        this.palyaHossz = palyahossz;
        setAlapPalya();
-       //setHajo(); ebben van hogy hol vannak
-      setHolTalalt();
+       setHajo(); //ebben van hogy hol vannak
+       setHolTalalt();
    }   
    
    private void setHajo(){
@@ -42,13 +42,15 @@ public class Jatek {
        Scanner scr = new Scanner(System.in);
        System.out.println("Hova lövi a torpedót?(1-7)");
        int tipp = scr.nextInt()-1;
-       
        return tipp;
    }
    
-   public Boolean talalt_e(){
-       return null;
-       
+   public Boolean talalt_e(int tipp){
+       int i = 0;
+       while (i < holVan.length && !(holVan[i] == tipp)) {
+           i++;
+       }
+       return i < holVan.length;
    }
    
    public Boolean elsuljedt_e(){
