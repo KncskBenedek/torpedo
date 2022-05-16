@@ -26,6 +26,7 @@ public class Jatek {
        this.hajoHossz = hajoHossz;
        this.palyaHossz = palyahossz;
        setAlapPalya();
+       this.holVan = new int[this.hajoHossz];
        setHajo(); //ebben van hogy hol vannak
        setHolTalalt();
    }   
@@ -54,7 +55,11 @@ public class Jatek {
        while (i < holVan.length && !(holVan[i] == tipp)) {
            i++;
        }
-       
+
+       if (i < holVan.length) {
+           holTalalt[i] = true;
+       }
+
        return i < holVan.length;
    }
    
@@ -68,8 +73,6 @@ public class Jatek {
        }else{
            return true;
        }
-       
- 
    }
 
     private void setAlapPalya() {
