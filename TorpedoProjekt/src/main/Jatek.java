@@ -6,14 +6,16 @@ public class Jatek {
    private int palyaHossz;
    private int[] holVan;
    private boolean[] holTalalt;
+   public static final String[] VALASZOK = {"nem talált", "talált", "talált és süllyedt"}; 
    
-   
+   Jatek(){
+       this(7);
+   }
    Jatek(int palyahossz){
        this.palyaHossz = palyahossz;
        setAlapPalya();
-       //setHajo();
-       /
-       
+       //setHajo(); ebben van hogy hol vannak
+      setHolTalalt();
    }   
    
    private void setHajo(){
@@ -34,6 +36,10 @@ public class Jatek {
            for (int i = 0; i < palyaHossz; i++) {
                alapPalya[i] = 0;
             }
+    }
+
+    private void setHolTalalt() {
+        this.holTalalt = new boolean[hajoHossz];
     }
    
     
