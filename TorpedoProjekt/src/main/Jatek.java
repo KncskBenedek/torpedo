@@ -50,12 +50,12 @@ public class Jatek {
        while (i < holVan.length && !(holVan[i] == tipp)) {
            i++;
        }
+       
        return i < holVan.length;
    }
    
    public Boolean elsuljedt_e(){
        return null;
-       
    }
 
     private void setAlapPalya() {
