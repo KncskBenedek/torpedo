@@ -19,7 +19,11 @@ public class Jatek {
    Jatek(){
        this(7);
    }
-   Jatek(int palyahossz){
+   Jatek(int palyaHossz){
+       this(palyaHossz, 3);
+   }
+   Jatek(int palyahossz, int hajoHossz){
+       this.hajoHossz = hajoHossz;
        this.palyaHossz = palyahossz;
        setAlapPalya();
        //setHajo(); ebben van hogy hol vannak
@@ -61,6 +65,14 @@ public class Jatek {
 
     private void setHolTalalt() {
         this.holTalalt = new boolean[hajoHossz];
+        for (int i = 0; i < hajoHossz; i++) {
+            this.holTalalt[i] = false;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Jatek{" + "alapPalya=" + alapPalya + ", palyaHossz=" + palyaHossz + ", holVan=" + holVan + ", holTalalt=" + holTalalt + ", hajoHossz=" + hajoHossz + '}';
     }
    
     
