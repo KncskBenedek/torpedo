@@ -5,12 +5,15 @@ public class Jatek {
    private int[] alapPalya;
    private int palyaHossz;
    private int[] holVan;
-   private int[] holTalalt;
+   private boolean[] holTalalt;
    
    
    Jatek(int palyahossz){
        this.palyaHossz = palyahossz;
        setAlapPalya();
+       //setHajo();
+       /
+       
    }   
    
    private void setHajo(){
@@ -31,7 +34,6 @@ public class Jatek {
            for (int i = 0; i < palyaHossz; i++) {
                alapPalya[i] = 0;
             }
-           
     }
    
     
