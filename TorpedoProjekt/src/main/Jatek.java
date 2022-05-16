@@ -19,11 +19,15 @@ public class Jatek {
    Jatek(){
        this(7);
    }
-   Jatek(int palyahossz){
+   Jatek(int palyaHossz){
+       this(palyaHossz, 3);
+   }
+   Jatek(int palyahossz, int hajoHossz){
+       this.hajoHossz = hajoHossz;
        this.palyaHossz = palyahossz;
        setAlapPalya();
-       //setHajo(); ebben van hogy hol vannak
-      setHolTalalt();
+       setHajo(); //ebben van hogy hol vannak
+       setHolTalalt();
    }   
    
    private void setHajo(){
@@ -42,19 +46,27 @@ public class Jatek {
        Scanner scr = new Scanner(System.in);
        System.out.println("Hova lövi a torpedót?(1-7)");
        int tipp = scr.nextInt()-1;
-       
        return tipp;
    }
    
    public Boolean talalt_e(int tipp){
+<<<<<<< HEAD
        
        
        
        return null;
+=======
+       int i = 0;
+       while (i < holVan.length && !(holVan[i] == tipp)) {
+           i++;
+       }
+>>>>>>> b82b3ba3279fa0cdd76ce1dca3b461b228c850ce
        
+       return i < holVan.length;
    }
    
    public Boolean elsuljedt_e(){
+<<<<<<< HEAD
        int i = 0;
        while(i < holTalalt.length && holTalalt[i] == true){
            i++;
@@ -66,6 +78,9 @@ public class Jatek {
        }
        
        
+=======
+       return null;
+>>>>>>> b82b3ba3279fa0cdd76ce1dca3b461b228c850ce
    }
 
     private void setAlapPalya() {
@@ -77,6 +92,14 @@ public class Jatek {
 
     private void setHolTalalt() {
         this.holTalalt = new boolean[hajoHossz];
+        for (int i = 0; i < hajoHossz; i++) {
+            this.holTalalt[i] = false;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Jatek{" + "alapPalya=" + alapPalya + ", palyaHossz=" + palyaHossz + ", holVan=" + holVan + ", holTalalt=" + holTalalt + ", hajoHossz=" + hajoHossz + '}';
     }
    
     
