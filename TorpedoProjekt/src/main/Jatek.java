@@ -26,6 +26,7 @@ public class Jatek {
        this.hajoHossz = hajoHossz;
        this.palyaHossz = palyahossz;
        setAlapPalya();
+       this.holVan = new int[this.hajoHossz];
        setHajo(); //ebben van hogy hol vannak
        setHolTalalt();
    }   
@@ -35,6 +36,10 @@ public class Jatek {
        int hajoKezdet =  rnd.nextInt(palyaHossz-hajoHossz);
        for (int i = hajoKezdet; i < hajoKezdet+3; i++) {
            alapPalya[i] = 1;
+       }
+       for (int i = 0; i < hajoHossz; i++) {
+           holVan[i] = hajoKezdet;
+           hajoKezdet++;
        }
    }
    
@@ -46,18 +51,31 @@ public class Jatek {
    }
    
    public Boolean talalt_e(int tipp){
+
        int i = 0;
        while (i < holVan.length && !(holVan[i] == tipp)) {
            i++;
        }
+
        if (i < holVan.length) {
            holTalalt[i] = true;
        }
+
        return i < holVan.length;
    }
    
    public Boolean elsuljedt_e(){
-       return null;
+
+       int i = 0;
+       while(i < holTalalt.length && holTalalt[i] == true){
+           i++;
+       }
+       if (i < holTalalt.length){
+           return false;
+       }else{
+           return true;
+       }
+       
    }
 
     private void setAlapPalya() {
