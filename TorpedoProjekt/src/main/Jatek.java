@@ -32,6 +32,10 @@ public class Jatek {
        for (int i = hajoKezdet; i < hajoKezdet+3; i++) {
            alapPalya[i] = 1;
        }
+       for (int i = 0; i < hajoHossz; i++) {
+           holVan[i] = hajoKezdet;
+           hajoKezdet++;
+       }
    }
    
    public int bemenet(){
@@ -42,13 +46,25 @@ public class Jatek {
        return tipp;
    }
    
-   public Boolean talalt_e(){
+   public Boolean talalt_e(int tipp){
+       
+       
+       
        return null;
        
    }
    
    public Boolean elsuljedt_e(){
-       return null;
+       int i = 0;
+       while(i < holTalalt.length && holTalalt[i] == true){
+           i++;
+       }
+       if (i < holTalalt.length-1){
+           return false;
+       }else{
+           return true;
+       }
+       
        
    }
 
