@@ -8,6 +8,11 @@ public class Jatek {
    private int[] holTalalt;
    
    
+   Jatek(int palyahossz){
+       this.palyaHossz = palyahossz;
+       setAlapPalya();
+   }   
+   
    private void setHajo(){
        
    }
@@ -20,6 +25,14 @@ public class Jatek {
        return null;
        
    }
+
+    private void setAlapPalya() {
+           this.alapPalya = new int[palyaHossz];
+           for (int i = 0; i < palyaHossz; i++) {
+               alapPalya[i] = 0;
+            }
+           
+    }
    
     
     
