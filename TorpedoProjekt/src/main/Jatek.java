@@ -50,37 +50,26 @@ public class Jatek {
    }
    
    public Boolean talalt_e(int tipp){
-<<<<<<< HEAD
-       
-       
-       
-       return null;
-=======
        int i = 0;
        while (i < holVan.length && !(holVan[i] == tipp)) {
            i++;
        }
->>>>>>> b82b3ba3279fa0cdd76ce1dca3b461b228c850ce
        
        return i < holVan.length;
    }
    
    public Boolean elsuljedt_e(){
-<<<<<<< HEAD
        int i = 0;
        while(i < holTalalt.length && holTalalt[i] == true){
            i++;
        }
-       if (i < holTalalt.length-1){
+       if (i < holTalalt.length){
            return false;
        }else{
            return true;
        }
        
-       
-=======
-       return null;
->>>>>>> b82b3ba3279fa0cdd76ce1dca3b461b228c850ce
+ 
    }
 
     private void setAlapPalya() {
